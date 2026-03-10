@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="5.0">
+    <name>com_broekmansgenealogy</name>
+    <author>OpenAI</author>
+    <creationDate>2026-03-09</creationDate>
+    <version>0.6.9</version>
+    <description>Broekmans Genealogie component voor Joomla 5</description>
+    <namespace path="src">Broekmans\Component\Broekmansgenealogy</namespace>
+    <scriptfile>script.php</scriptfile>
+
+    <files folder="site">
+        <filename>broekmansgenealogy.php</filename>
+        <folder>services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages folder="site/language">
+        <language tag="nl-NL">nl-NL/com_broekmansgenealogy.ini</language>
+        <language tag="nl-NL">nl-NL/com_broekmansgenealogy.sys.ini</language>
+    </languages>
+
+    <administration>
+        <menu img="class:users">COM_BROEKMANSGENEALOGY
+            <params>
+                <dashboard>dashboard</dashboard>
+            </params>
+        </menu>
+        <submenu>
+            <menu link="option=com_broekmansgenealogy&amp;view=dashboard">COM_BROEKMANSGENEALOGY_MENU_DASHBOARD</menu>
+            <menu link="option=com_broekmansgenealogy&amp;view=persons">
+                COM_BROEKMANSGENEALOGY_MENU_PERSONS
+                <params>
+                    <menu-quicktask-title>COM_BROEKMANSGENEALOGY_MENU_PERSON_ADD</menu-quicktask-title>
+                    <menu-quicktask>index.php?option=com_broekmansgenealogy&amp;view=person&amp;layout=edit</menu-quicktask>
+                </params>
+            </menu>
+            <menu link="option=com_broekmansgenealogy&amp;view=families">
+                COM_BROEKMANSGENEALOGY_MENU_FAMILIES
+                <params>
+                    <menu-quicktask-title>COM_BROEKMANSGENEALOGY_MENU_FAMILY_ADD</menu-quicktask-title>
+                    <menu-quicktask>index.php?option=com_broekmansgenealogy&amp;view=family&amp;layout=edit</menu-quicktask>
+                </params>
+            </menu>
+        </submenu>
+        <files folder="admin">
+            <filename>broekmansgenealogy.php</filename>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="nl-NL">nl-NL/com_broekmansgenealogy.ini</language>
+            <language tag="nl-NL">nl-NL/com_broekmansgenealogy.sys.ini</language>
+        </languages>
+    </administration>
+
+    <media destination="com_broekmansgenealogy" folder="media">
+        <folder>css</folder>
+    </media>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8mb4">admin/sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8mb4">admin/sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+</extension>

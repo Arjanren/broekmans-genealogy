@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_BROEKMANSGENEALOGY_MENU_TREE_DEFAULT" option="COM_BROEKMANSGENEALOGY">
+        <message>COM_BROEKMANSGENEALOGY_MENU_TREE_DEFAULT_DESC</message>
+    </layout>
+    <fields name="request">
+        <fieldset name="request">
+            <field name="option" type="hidden" default="com_broekmansgenealogy" />
+            <field name="view" type="hidden" default="tree" />
+            <field name="root_id" type="number" label="COM_BROEKMANSGENEALOGY_FIELD_ROOT_ID_LABEL" description="COM_BROEKMANSGENEALOGY_FIELD_ROOT_ID_DESC" />
+        </fieldset>
+    </fields>
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="depth" type="list" label="COM_BROEKMANSGENEALOGY_FIELD_DEPTH_LABEL" default="4">
+                <option value="1">1 generatie</option>
+                <option value="2">2 generaties</option>
+                <option value="3">3 generaties</option>
+                <option value="4">4 generaties</option>
+                <option value="5">5 generaties</option>
+                <option value="6">6 generaties</option>
+                <option value="7">7 generaties</option>
+                <option value="8">8 generaties</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

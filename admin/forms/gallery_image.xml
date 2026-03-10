@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="image" type="media" label="Foto" preview="true" />
+</form>

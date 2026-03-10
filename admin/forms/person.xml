@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="id" type="hidden" />
+        <field name="firstname" type="text" label="Voornamen" required="true" />
+        <field name="nickname" type="text" label="Roepnaam" required="true" />
+        <field name="prefix" type="text" label="Tussenvoegsel" />
+        <field name="show_prefix" type="radio" label="Tussenvoegsel zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="lastname" type="text" label="Achternaam" required="true" />
+        <field name="show_lastname" type="radio" label="Achternaam zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="alternative_name" type="text" label="Alternatieve naam" />
+        <field name="show_alternative_name" type="radio" label="Alternatieve naam zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="gender" type="list" label="Geslacht" default="">
+            <option value="">Onbekend</option>
+            <option value="M">Man</option>
+            <option value="V">Vrouw</option>
+            <option value="X">Anders / onbekend</option>
+        </field>
+        <field name="birth_date" type="calendar" label="Geboortedatum" format="%d-%m-%Y" />
+        <field name="show_birth_date" type="radio" label="Geboortedatum zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="birth_place" type="text" label="Geboorteplaats" />
+        <field name="show_birth_place" type="radio" label="Geboorteplaats zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="death_date" type="calendar" label="Overlijdensdatum" format="%d-%m-%Y" showon="living:0" />
+        <field name="show_death_date" type="radio" label="Overlijdensdatum zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="death_place" type="text" label="Overlijdensplaats" showon="living:0" />
+        <field name="show_death_place" type="radio" label="Overlijdensplaats zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="occupation" type="text" label="Beroep" />
+        <field name="show_occupation" type="radio" label="Beroep zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="street" type="text" label="Straat" />
+        <field name="show_street" type="radio" label="Straat zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="house_number" type="text" label="Huisnummer" />
+        <field name="show_house_number" type="radio" label="Huisnummer zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="postal_code" type="text" label="Postcode" />
+        <field name="show_postal_code" type="radio" label="Postcode zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="city" type="text" label="Woonplaats" />
+        <field name="show_city" type="radio" label="Woonplaats zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="country" type="text" label="Land" default="Nederland" />
+        <field name="show_country" type="radio" label="Land zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="phone" type="tel" label="Telefoonnummer" />
+        <field name="show_phone" type="radio" label="Telefoonnummer zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="email" type="email" label="E-mailadres" />
+        <field name="show_email" type="radio" label="E-mailadres zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="website" type="url" label="Website" />
+        <field name="show_website" type="radio" label="Website zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="photo" type="media" label="Hoofdfoto" description="Deze foto wordt groot getoond op de persoonspagina en als startfoto van de galerij gebruikt." preview="true" />
+        <field name="gallery_images"
+            type="subform"
+            label="Extra foto's"
+            description="Deze foto's worden als extra thumbnails getoond. Klik erop om de hoofdfoto op de pagina te wisselen."
+            formsource="administrator/components/com_broekmansgenealogy/forms/gallery_image.xml"
+            multiple="true"
+            min="0"
+            layout="joomla.form.field.subform.repeatable-table"
+            buttons="add,remove"
+        />
+
+        <field name="birth_card_front" type="media" label="Geboortekaartje - voorkant" preview="true" />
+        <field name="birth_card_inside_left" type="media" label="Geboortekaartje - binnenkant links" preview="true" />
+        <field name="birth_card_inside_right" type="media" label="Geboortekaartje - binnenkant rechts" preview="true" />
+        <field name="birth_card_back" type="media" label="Geboortekaartje - achterkant" preview="true" />
+        <field name="memorial_card_front" type="media" label="Bidprentje - voorkant" preview="true" />
+        <field name="memorial_card_inside_left" type="media" label="Bidprentje - binnenkant links" preview="true" />
+        <field name="memorial_card_inside_right" type="media" label="Bidprentje - binnenkant rechts" preview="true" />
+        <field name="memorial_card_back" type="media" label="Bidprentje - achterkant" preview="true" />
+        <field name="birth_certificate_front" type="media" label="Geboorteakte - pagina 1 / voorkant" preview="true" />
+        <field name="birth_certificate_page_2" type="media" label="Geboorteakte - pagina 2" preview="true" />
+        <field name="birth_certificate_page_3" type="media" label="Geboorteakte - pagina 3" preview="true" />
+        <field name="birth_certificate_back" type="media" label="Geboorteakte - pagina 4 / achterkant" preview="true" />
+        <field name="mourning_card_front" type="media" label="Rouwkaart - voorkant" preview="true" />
+        <field name="mourning_card_inside_left" type="media" label="Rouwkaart - binnenkant links" preview="true" />
+        <field name="mourning_card_inside_right" type="media" label="Rouwkaart - binnenkant rechts" preview="true" />
+        <field name="mourning_card_back" type="media" label="Rouwkaart - achterkant" preview="true" />
+        <field name="death_ad_front" type="media" label="Overlijdensadvertentie - pagina 1 / voorkant" preview="true" />
+        <field name="death_ad_page_2" type="media" label="Overlijdensadvertentie - pagina 2" preview="true" />
+        <field name="death_ad_page_3" type="media" label="Overlijdensadvertentie - pagina 3" preview="true" />
+        <field name="death_ad_back" type="media" label="Overlijdensadvertentie - pagina 4 / achterkant" preview="true" />
+        <field name="diploma_front" type="media" label="Diploma - pagina 1 / voorkant" preview="true" />
+        <field name="diploma_page_2" type="media" label="Diploma - pagina 2" preview="true" />
+        <field name="diploma_page_3" type="media" label="Diploma - pagina 3" preview="true" />
+        <field name="diploma_back" type="media" label="Diploma - pagina 4 / achterkant" preview="true" />
+        <field name="misc_document_front" type="media" label="Diverse documenten - pagina 1 / voorkant" preview="true" />
+        <field name="misc_document_page_2" type="media" label="Diverse documenten - pagina 2" preview="true" />
+        <field name="misc_document_page_3" type="media" label="Diverse documenten - pagina 3" preview="true" />
+        <field name="misc_document_back" type="media" label="Diverse documenten - pagina 4 / achterkant" preview="true" />
+        <field name="biography" type="editor" label="Biografie" buttons="true" hide="pagebreak,readmore" />
+        <field name="show_biography" type="radio" label="Biografie zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="notes" type="editor" label="Notities" buttons="true" hide="pagebreak,readmore" />
+        <field name="show_notes" type="radio" label="Notities zichtbaar" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="show_nickname" type="radio" label="Roepnaam zichtbaar bij persoon info" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="show_firstname" type="radio" label="Voornamen zichtbaar bij persoon info" default="1" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+        <field name="living" type="radio" label="Levende persoon" default="0" class="btn-group btn-group-yesno">
+            <option value="1">Ja</option>
+            <option value="0">Nee</option>
+        </field>
+    </fieldset>
+</form>
